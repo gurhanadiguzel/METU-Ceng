@@ -1,0 +1,1 @@
+infection([['A', 'B', 'C', 'D', 'E'], ['I', 'J', 'K', 'L', 'M'], ['R', 'S', 'T', 'U', 'V'], ['AA', 'AB', 'AC', 'AD', 'AE'], ['AI', 'AJ', 'AK', 'AL', 'AM'], ['AR', 'AS', 'AT', 'AU', 'AV'], ['BA', 'BB', 'BC', 'BD', 'BE'], ['BI', 'BJ', 'BK', 'BL', 'BM'], ['BR', 'BS', 'BT', 'BU', 'BV'], ['CA', 'CB', 'CC', 'CD', 'CE']], 'A', 4)

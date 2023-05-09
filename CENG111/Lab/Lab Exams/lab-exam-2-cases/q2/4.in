@@ -1,0 +1,1 @@
+num_safe_paths_to_castle(['start', 'road', 'road', 'bush', 'road', 'spike', 'road', 'turtle shell', 'castle'])

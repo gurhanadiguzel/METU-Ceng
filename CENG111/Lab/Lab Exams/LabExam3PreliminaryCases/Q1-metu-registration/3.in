@@ -1,0 +1,1 @@
+register([['Ceng111', 10, 9], ['Ceng140',10,8]],[['Student0','Ceng111'],['Student1','Ceng111','Ceng140'], ['Student2','Ceng140']])

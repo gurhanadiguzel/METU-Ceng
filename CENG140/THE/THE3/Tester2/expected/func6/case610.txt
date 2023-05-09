@@ -1,0 +1,10 @@
+
+Apartment Name: B, Max Bandwidth: 540
+(id: 356, initial_bandwith: 3, is_empty: 0) (id: 36, initial_bandwith: 25, is_empty: 0) (id: 148, initial_bandwith: 56, is_empty: 0) (id: 226, initial_bandwith: 75, is_empty: 0) (id: 398, initial_bandwith: 64, is_empty: 0) (id: 232, initial_bandwith: 5, is_empty: 0) (id: 302, initial_bandwith: 6, is_empty: 0) (id: 131, initial_bandwith: 13, is_empty: 0) (id: 238, initial_bandwith: 1, is_empty: 0) (id: 103, initial_bandwith: 4, is_empty: 0) (id: 190, initial_bandwith: 9, is_empty: 0) (id: 41, initial_bandwith: 12, is_empty: 0) (id: 362, initial_bandwith: 11, is_empty: 0) (id: 164, initial_bandwith: 4, is_empty: 0) (id: 55, initial_bandwith: 12, is_empty: 0) (id: 495, initial_bandwith: 6, is_empty: 0) (id: 187, initial_bandwith: 0, is_empty: 0) 
+backwards
+(id: 187, initial_bandwith: 0, is_empty: 0)(id: 495, initial_bandwith: 6, is_empty: 0)(id: 55, initial_bandwith: 12, is_empty: 0)(id: 164, initial_bandwith: 4, is_empty: 0)(id: 362, initial_bandwith: 11, is_empty: 0)(id: 41, initial_bandwith: 12, is_empty: 0)(id: 190, initial_bandwith: 9, is_empty: 0)(id: 103, initial_bandwith: 4, is_empty: 0)(id: 238, initial_bandwith: 1, is_empty: 0)(id: 131, initial_bandwith: 13, is_empty: 0)(id: 302, initial_bandwith: 6, is_empty: 0)(id: 232, initial_bandwith: 5, is_empty: 0)(id: 398, initial_bandwith: 64, is_empty: 0)(id: 226, initial_bandwith: 75, is_empty: 0)(id: 148, initial_bandwith: 56, is_empty: 0)(id: 36, initial_bandwith: 25, is_empty: 0)(id: 356, initial_bandwith: 3, is_empty: 0)
+
+Apartment Name: H, Max Bandwidth: 320
+(id: 126, initial_bandwith: 57, is_empty: 0) (id: 224, initial_bandwith: 11, is_empty: 0) (id: 487, initial_bandwith: 29, is_empty: 0) (id: 306, initial_bandwith: 64, is_empty: 0) (id: 154, initial_bandwith: 64, is_empty: 0) 
+backwards
+(id: 154, initial_bandwith: 64, is_empty: 0)(id: 306, initial_bandwith: 64, is_empty: 0)(id: 487, initial_bandwith: 29, is_empty: 0)(id: 224, initial_bandwith: 11, is_empty: 0)(id: 126, initial_bandwith: 57, is_empty: 0)

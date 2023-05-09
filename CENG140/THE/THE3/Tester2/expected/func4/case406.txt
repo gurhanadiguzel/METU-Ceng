@@ -1,0 +1,5 @@
+
+Apartment Name: D, Max Bandwidth: 320
+(id: 29, initial_bandwith: 0, is_empty: 1) (id: 306, initial_bandwith: 57, is_empty: 0) (id: 256, initial_bandwith: 60, is_empty: 0) (id: 414, initial_bandwith: 11, is_empty: 0) 
+backwards
+(id: 414, initial_bandwith: 11, is_empty: 0)(id: 256, initial_bandwith: 60, is_empty: 0)(id: 306, initial_bandwith: 57, is_empty: 0)(id: 29, initial_bandwith: 0, is_empty: 1)

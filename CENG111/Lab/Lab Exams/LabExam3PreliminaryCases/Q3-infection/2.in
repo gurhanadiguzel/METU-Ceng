@@ -1,0 +1,1 @@
+infection([['Gary', 'Harry', 'Mary'], ['Sally', 'Terry', 'Nancy'], ['Jerry', 'Lily', 'Berry']], 'Terry', 2)

@@ -1,0 +1,1 @@
+register([['Ceng111', 10, 9], ['Ceng140', 11, 9], ['Ceng232', 10, 3], ['Ceng443', 10, 1],['Ceng351', 11, 3], ['Ceng790', 10,8], ['Ceng334',2,1]], [['Student0','Ceng111','Ceng140','Ceng232'], ['Student1','Ceng111','Ceng140','Ceng232'],['Student2','Ceng140','Ceng232'],['Student3','Ceng232','Ceng351','Ceng111','Ceng443','Ceng334','Ceng790']])
