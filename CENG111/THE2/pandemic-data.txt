@@ -1,0 +1,17 @@
+[
+[(95, 3), 6, 'notmasked', 'infected'] ,
+[(5, 4), 4, 'masked', 'notinfected'] ,
+[(97, 5), 4, 'masked', 'notinfected'] ,
+[(37, 17), 7, 'masked', 'notinfected'] ,
+[(44, 17), 0, 'notmasked', 'infected'] ,
+[(48, 17), 2, 'notmasked', 'notinfected'] ,
+[(37, 20), 6, 'masked', 'infected'] ,
+[(48, 24), 1, 'notmasked', 'notinfected'] ,
+[(37, 25), 6, 'notmasked', 'infected'] ,
+[(39, 27), 4, 'notmasked', 'notinfected'] ,
+[(48, 27), 2, 'masked', 'infected'] ,
+[(45, 28), 5, 'masked', 'notinfected'] ,
+[(3, 44), 0, 'notmasked', 'infected'] ,
+[(5, 45), 1, 'notmasked', 'notinfected'] ,
+[(89, 46), 7, 'masked', 'notinfected'] ,
+]
