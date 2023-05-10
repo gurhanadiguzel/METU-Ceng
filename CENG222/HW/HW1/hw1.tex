@@ -1,0 +1,129 @@
+\documentclass[15pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{tabularx}
+
+\begin{document}
+
+\section*{Student Information}
+Name : Gürhan İlhan Adıgüzel\\
+
+ID : 2448025 \\
+
+
+\section*{Answer 1\\}
+\subsection*{a) 
+\\\\ Let X be the probability of drawing a white ball from each box. 
+\\\\ W = White ball drawn  \hspace*{50} B = Black ball drawn
+\\\\ \hspace*{50} P(X = 1) = P\{W B B\} + P\{B W B\} + P\{B B W\}
+\\\\          = [(2/10).(11/15).(9/12) + (8/10).(4/15).(9/12) + (8/10).(11/15).(3/12)] = 5/12
+\\\\ \hspace*{50} P(X = 2) = P\{W W B\} + P\{W B W\} + P\{B W W\}
+\\\\          = [(2/10).(4/15).(9/12) + (2/10).(11/15).(3/12) + (8/10).(4/15).(3/12)] = 13/100
+\\\\ \hspace*{50} P(X = 3) = P\{W W W\}
+\\\\          = [(2/10).(4/15).(3/12)] = 1/75
+\\\\ P(x)= P(X=1) + P(X=2) + P(X=3) = 5/12 + 13/100 + 1/75 = 14/25
+\\\\
+}
+\subsection*{b)
+\\\\ The probability of drawing 3 white ball is
+\\\\ P(X = 3) = P\{W W W\}
+\\\\ \hspace*{57} = [(2/10).(4/15).(3/12)] = 1/75
+\\
+}
+\newpage
+\subsection*{c)
+\\\\ Drawing two white balls from:
+\\\\ First box = (2/10).(1/9) = 1/45
+\\\\ Second box = (4/15).(3/14) = 2/35
+\\\\ Third box = (3/12).(2/11) = 1/22
+\\\\ As we can conclude, the highest probability of drawing two white balls is from the second box, so I would choose the second box.
+\\
+}
+\subsection*{d) 
+\\\\Firstly, the probabilities of drawing white ball from each box are:
+\\\\First box = 2/10 \hspace*{30} Second box = 4/15 \hspace*{30} Third box = 3/12
+\\\\The box with the highest probability of drawing a white ball is the second box. So I'm going to draw from the second box first. 
+\\\\Then, the new probabilites will be:
+\\\\First box = 2/10 \hspace*{30} Second box = 3/14 \hspace*{30} Third box = 3/12
+\\\\Now the box with the highest probability of drawing a white ball is the third one. So, I will choose third box this time.
+\\
+}
+\subsection*{e)
+\\\\Expected value ${->}$ \hspace*{10} ${\mu}$ = E(X) = ${\Sigma_{x}}$ x P(x)
+\\\\ \hspace*{50} P(X = 1) = P\{W B B\} + P\{B W B\} + P\{B B W\}
+\\\\          = 1 . [(2/10).(11/15).(9/12) + (8/10).(4/15).(9/12) + (8/10).(11/15).(3/12)] = 5/12
+\\\\ \hspace*{50} P(X = 2) = P\{W W B\} + P\{W B W\} + P\{B W W\}
+\\\\          = 2 . [(2/10).(4/15).(9/12) + (2/10).(11/15).(3/12) + (8/10).(4/15).(3/12)] = 13/50
+\\\\ \hspace*{50} P(X = 3) = P\{W W W\}
+\\\\          = 3 . [(2/10).(4/15).(3/12)] = 1/25
+\\\\ \hspace* {50} ${\mu}$ = E(X) = 5/12 + 13/50 + 1/25= 43/60
+\\
+}
+\newpage
+\subsection*{f)
+\\\\P(B) = Probability of choosing Box 1 = 1/3       
+\\\\P(W) = Probability of drawing white ball 
+\\  \hspace*{35} = (2/10).(1/3)+ (4/15).(1/3)+(3/12).(1/3)= 2/10
+\\\\According to the Bayes Rule 
+\\\\ \hspace*{50} P(B ${\mid}$ W) = \dfrac{P(W \mid B) . P(B)}{P(W)}
+\\\\ \hspace*{50} P(B ${\mid}$ W) = \dfrac{ (2/10). (1/3)}{(2/10).(1/3)+ (4/15).(1/3)+(3/12).(1/3)} = 12/43 = 0.27906
+\\\\
+}
+\section*{Answer 2\\}
+\subsection*{a)
+\\\\ P(C) = Probability of Sam is corrupted = 0.1
+\\\\ P(D ${\mid}$  C) = Probability of Ring is destroyed when Sam is corrupted = 0.5
+\\\\ P(D) = Probability of Ring is destroyed =  (0.9).(0.9)+(0.5).(0.1) = 0.86
+\\\\ According to the Bayes Rule 
+\\\\ ${\hspace*{50}}$ P(C ${\mid}$ D) = \dfrac{P(D \mid C) . P(C)}{P(D)}
+\\\\ ${\hspace*{50}}$ P(C ${\mid}$ D) = \dfrac{(0.5).(0.1)}{(0.9).(0.9) + (0.5).(0.1)} = 5/86 = 0.05813
+\\
+}
+\newpage
+\subsection*{b)
+\\\\ P(${C_S_F}$) = Probability of Sam And Frodo are corrupted = (0.1).(0.25) 
+\\\\ P(D ${\mid}$ ${C_S_F}$) = Probability of Ring is destroyed when Sam and Frodo are corrupted 
+\\\\ ${\hspace*{65}}$ = 0.05
+\\\\ P(D) = Probability of Ring is destroyed in 4 conditions
+\\\\ ${\hspace*{50}}$ Sam and Frodo corrupted = (0.25).(0.1).(0.05) = 0.00125
+\\\\ ${\hspace*{50}}$ Sam corrupted Frodo not = (0.1).(0.75).(0.5) = 0.0375
+\\\\ ${\hspace*{50}}$ Frodo corrupted Sam not = (0.25).(0.9).(0.2) = 0.045
+\\\\ ${\hspace*{50}}$ Sam and Frodo not corrupted = (0.9).(0.75).(0.9) = 0.6075
+\\\\ When we sum all these up we get  P(D) = 0.69125
+\\\\ According to the Bayes Rule
+\\\\ P(${C_S_F}$ \mid D) = \dfrac{P(D \mid {C_S_F}).P({C_S_F})}{P(D)} = \dfrac{(0.05).(0.25).(0.1)}{0.69125} = 0.0018
+\\\\
+}
+\section*{Answer 3}
+\subsection*{a)
+\\\\ There are 2 possible options for a total of four snowy days.
+\\\\ The first option is both Ankara and İstanbul have 2 snowy days. 
+\\\\ ${\hspace*{50}}$ According to the Table 1 ; P(A=2) . P(I=2) = 0.2
+\\\\ The second option is the Ankara has 3 snowy days and İstanbul has 1 snowy day.
+\\\\ ${\hspace*{50}}$ According to the Table 1 ; P(A=3) . P(I=1) = 0.12
+\\\\ So, to get the probability of four snowy days in total, we should add these probabilities.
+\\\\ ${\hspace*{50}}$ P(A=2).P(I=2) + P(A=3).P(I=1) = 0.2 + 0.12 = 0.32
+\\ 
+}
+\newpage
+\subsection*{b)
+\\\\ Random variables X and Y are independent if
+\\\\ ${\hspace*{50}}$ ${P_{(X,Y)}(x, y)}$ = ${P_X (x)}$ . ${P_Y (y)}$ for all values of x and y. 
+\\\\ ${P_X (1)}$ = 0.30 ${P_X (2)}$ = 0.50 ${P_X (3)}$ = 0.20
+\\\\ ${P_Y (1)}$ = 0.60 ${P_Y (2)}$ = 0.40 
+\\\\ To decide on the independence of X and Y , we should check if their joint pmf factors into a
+product of marginal pmfs. We see that all the  ${P_{(X,Y)}(x, y)}$ values equals to the  ${P_X (x)}$ . ${P_Y (y)}$ . We cannot find the a pair of x and y that violates the formula for independent random variables. Therefore, the numbers of errors in two modules are independent.
+\\
+}
+\end{document}

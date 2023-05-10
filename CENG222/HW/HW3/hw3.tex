@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\section*{Student Information}
+
+Name : Gürhan İlhan Adıgüzel\\
+
+ID : 2448025\\
+
+
+\section*{Answer 1}
+\paragraph{a)
+\\\\ $\hat{\theta}$ is the center of interval.
+\\\\If parameter $\theta$ has an unbiased, Normally
+distributed estimator $\hat{\theta}$ , then
+\\\\ {\hspace*{50}} $\hat{\theta} \pm z_{a/2} . \sigma(\hat{\theta})$ = $[\hat{\theta} - z_{a/2} . \sigma(\hat{\theta}) , \hat{\theta} + z_{a/2} . \sigma(\hat{\theta})]$ 
+\\\\ This sample has size n = 10 and sample mean $\bar{X}$  = 16.96. To attain confidence level of 
+\\\\ {\hspace*{50}} $1-a= 0.90,$ 
+\\\\ we need $a = 0.10$ and  $a/2 = 0.05$. \\\\ Hence, we are looking for quantiles 
+\\\\ {\hspace*{50}} $q_{0.05} = -z_{0.05}$ and $q_{0.95} = z_{0.05}$.
+\\\\ According to the Table A4 from the book, we find that $q_{0.95} = 1.645$ . 
+\\\\ Then , we obtain a $\%{90}$ confidence interval for $\mu$, 
+\\\\ {\hspace*{50}} $\bar{X} \pm z_{a/2} \dfrac{\sigma}{\sqrt{n}}$ = $16.96 \pm (1.645)\dfrac{3}{\sqrt{10}}$ = $16.96 \pm 1.560 $ or $ [15.34,18.52]$. 
+\\\\ When the confidence level become $\%99$,
+\\\\ {\hspace*{50}} $a = 0.01$ and $a/2 = 0.005$. 
+\\\\ Then, $q_{0.01} = -z_{0.01}$ and $q_{0.995} = z_{0.01}$.
+\\\\ {\hspace*{50}} $\bar{X} \pm z_{a/2} \dfrac{\sigma}{\sqrt{n}}$ = $16.96 \pm (2.576)\dfrac{3}{\sqrt{10}}$ = $16.96 \pm 2.443 $ or $ [14.517,19.403]$. 
+}
+\newpage
+\paragraph{b)
+\\\\ $\sigma(\hat{\theta})$ is the margin = $1.55 \leq \Delta$.
+\\\\ We have $\Delta = 1.55, a = 0.02, $ and $ \sigma = 3$. By the formula, we need a sample of 
+\\\\ {\hspace*{50}} $ n \geq \Big(\dfrac{z_{0.02/2} . \sigma}{\Delta}\Big)^2 $ = $\Big(\dfrac{(2.326).(3)}{1.55}\Big)^2$ = 20.267
+\\\\ The minimum sample size that satisfies $\Delta$ should be at least 21 observations.
+}
+
+\section*{Answer 2}
+\paragraph{a)
+\\\\No, the mean and sample size alone are not sufficient as the statistics for the restaurant. Apart from these two value, we also need to  another parameters which are standard deviation and variance to measure the spread of this data.
+}
+
+\paragraph{b)
+\\\\ Since we should use $ \mu > 7.5$, we need to use Alternative hypothesis, and we know, 
+\\\\ Mean : $\bar{X} = 7.4$ 
+\\\\ Standard deviation : $\sigma = 0.8$,
+\\\\ Sample size : $n = 256$,
+\\\\ According to the Test Static : $ Z = \dfrac{\bar{X} - \mu}{\sigma / \sqrt{n}} = \dfrac{7.4 - 7.5}{(0.8)/ \sqrt{256}}  = -2$,
+\\\\ Then, we need to find to critical value when $a = 0.05$, 
+\\\\ The critical value $z_{a} = 1.645$.
+\\\\ According to the the left-tail alternative, we reject $H_{0}$ if $Z \leq -z_{a}$
+\\\\ Since $Z$ value less than critical value of $-z$, we can reject the null hypothesis. Therefore, we do not include the restaurant in our list of candidate restaurants.
+}
+\newpage
+\paragraph{c)
+\\\\ Now, standard deviation has been changed to 1, Then,
+\\\\ {\hspace*{50}}  $Z= - \dfrac{7.4-7.5}{1/\sqrt{256}} = 1.6$
+\\\\ Since $Z$ value is greater than critical value of $-z$, we can accept the null hypothesis. Therefore, we do include the restaurant in our list of candidate restaurants.
+}
+
+\paragraph{d)
+\\\\Since the result given is already bigger than the population mean of 7.5, we do not need to worry about standard deviation now , and we do not have to look to any statistical test. 
+}
+
+\section*{\\\\Answer 3}
+\paragraph{
+{\hspace*{15}}For Computer A : $\bar{X_{1}}= 211 $ , $\sigma_{1} = 5.2$, $n_{1} = 20$,
+\\\\ {\hspace*{20}}For Computer B : $\bar{X_{2}}= 133 $ , $\sigma_{2} = 22.8$, $n_{1} = 32$ ,
+\\\\ {\hspace*{20}}According to the Null hypothesis : $H_{0}: \mu_{1} -  \mu_{2} \geq 90 $,
+\\\\ {\hspace*{20}}According to the Alternative hypothesis : $H_{1}: \mu_{1} -  \mu_{2} < 90 $,
+}
+
+\paragraph{a)
+\\\\  According to the Pooled Sample Variance : 
+\\\\ $ S_{p}^2 = \dfrac{(n_{1}-1) \cdot \sigma_{1}^2 + (n_{2}-1)\cdot \sigma_{2}^2}{(n_{1} + n_{2} -2 )}$ 
+\\\\ {\hspace*{25}}= $ \dfrac{(20-1) \cdot (5.2)^2 + (32-1) \cdot (22.8)^2}{(20+32-2)} $
+\\\\ {\hspace*{22}} = $332.57$
+\newpage
+\\\\  According to the T-Test statistic :
+\\\\ $ t= \dfrac{(\bar{X_{1}} - \bar{X_{2}} - (\mu_{1} - \mu_{2}))}{\sqrt{S_{p}^2 \cdot (1/n_{1} + 1/n_{2})}} = \dfrac{(211 - 133 - 90)}{\sqrt{332.57 \cdot (1/20 + 1/32)}}  = -2.30$\\\\ 
+\\\\ degrees of freedom $= n_{1} + n_{2} -2 = 50 $
+\\\\ With the help of Octave function tcdf(x,n),
+\\\\ {\hspace*{25}} $p-value = tcdf(-2.30, 50) = 0.0126$
+\\\\ Since  $p-value  > a $, then we cannot reject Null Hypothesis.
+\\\\ As a result, we can conclude that there is enough information to conclude that the computer B provides better improvement or a 90-minute at 0.01 significance level.
+}
+\paragraph{b)
+\\\\ According to the T-Test static:
+\\\\ $ t= \dfrac{(\bar{X_{1}} - \bar{X_{2}} - (\mu_{1} - \mu_{2}))}{\sqrt{\sigma_{1}^2/n_{1} + \sigma_{2}^2/n_{2}}}  = \dfrac{(211 - 133 - 90)}{\sqrt{(5.2)^2 /20 + (22.8)^2 / 32}} = -2.8606$\\\\
+\\\\ degrees of freedom $ =\dfrac{\Big(\dfrac{\sigma_{1}^2}{n_{1}^2} + \dfrac{\sigma_{2}^2}{n_{2}}\Big)^2}{\dfrac{(\sigma_{1}^2 / n_{1})^2}{n_{1}-1} + \dfrac{(\sigma_{2}^2 / n_{2})^2}{n_{2}-1}}= 35.96 = 36$ ,\\\\
+\\\\ With the help of Octave function tcdf(x,n),
+\\\\ {\hspace*{25}} $p-value = tcdf(-2.8606,35) = 0.0035$
+\\\\ Since  $p-value < a $, then we can reject the Null Hypothesis. 
+\\\\ As a result, we can conclude that there is not enough information to conclude that the computer B does not provides better improvement or a 90-minute at 0.01 significance level.
+}
+\end{document}
+
