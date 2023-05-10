@@ -1,0 +1,9 @@
+
+Apartment Name: I, Max Bandwidth: 140
+(id: 424, initial_bandwith: 42, is_empty: 0) (id: 250, initial_bandwith: 25, is_empty: 0) (id: 11, initial_bandwith: 44, is_empty: 0) 
+backwards
+(id: 11, initial_bandwith: 44, is_empty: 0)(id: 250, initial_bandwith: 25, is_empty: 0)(id: 424, initial_bandwith: 42, is_empty: 0)
+
+Apartment Name: V, Max Bandwidth: 260
+
+Apartment Name: New Apartment, Max Bandwidth: 300

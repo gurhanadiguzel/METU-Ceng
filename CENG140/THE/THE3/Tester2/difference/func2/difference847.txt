@@ -1,0 +1,10 @@
+Expected Output:
+
+Apartment Name: J, Max Bandwidth: 140
+
+Apartment Name: U, Max Bandwidth: 120
+(id: 498, initial_bandwith: 9, is_empty: 0) 
+backwards
+(id: 498, initial_bandwith: 9, is_empty: 0)
+
+Given Output:

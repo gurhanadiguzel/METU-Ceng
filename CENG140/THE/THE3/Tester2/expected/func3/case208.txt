@@ -1,0 +1,5 @@
+
+Apartment Name: H, Max Bandwidth: 120
+(id: 147, initial_bandwith: 11, is_empty: 0) (id: 473, initial_bandwith: 10, is_empty: 0) (id: 385, initial_bandwith: 2, is_empty: 0) (id: 212, initial_bandwith: 14, is_empty: 0) (id: 446, initial_bandwith: 11, is_empty: 0) (id: 55, initial_bandwith: 4, is_empty: 0) (id: 201, initial_bandwith: 4, is_empty: 0) (id: 19, initial_bandwith: 8, is_empty: 0) 
+backwards
+(id: 19, initial_bandwith: 8, is_empty: 0)(id: 201, initial_bandwith: 4, is_empty: 0)(id: 55, initial_bandwith: 4, is_empty: 0)(id: 446, initial_bandwith: 11, is_empty: 0)(id: 212, initial_bandwith: 14, is_empty: 0)(id: 385, initial_bandwith: 2, is_empty: 0)(id: 473, initial_bandwith: 10, is_empty: 0)(id: 147, initial_bandwith: 11, is_empty: 0)
