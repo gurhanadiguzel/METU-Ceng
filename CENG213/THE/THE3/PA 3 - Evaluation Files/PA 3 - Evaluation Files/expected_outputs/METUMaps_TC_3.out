@@ -1,0 +1,26 @@
+Calculating Route(s) between "A7_Gate" and "A4_Gate"...
+================
+Journey         : A7_Gate->A4_Gate
+Current Location: A7_Gate
+Time Left       : 24 minutes
+Current Route   : A7_Gate--2->Teknokent--5->Tekno_A8--2->FL--3->FL_I--2->Lib_I--2->C_Statue--8->A4_Gate
+================
+Route between "Teknokent" and "A4_Gate" is in cache, using that...
+================
+Journey         : A7_Gate->A4_Gate
+Current Location: Teknokent
+Time Left       : 22 minutes
+Current Route   : Teknokent--5->Tekno_A8--2->FL--3->FL_I--2->Lib_I--2->C_Statue--8->A4_Gate
+================
+Route between "Tekno_A8" and "A4_Gate" is in cache, using that...
+Route between "FL" and "A4_Gate" is in cache, using that...
+Route between "FL_I" and "A4_Gate" is in cache, using that...
+Route between "Lib_I" and "A4_Gate" is in cache, using that...
+================
+Journey         : A7_Gate->A4_Gate
+Current Location: Lib_I
+Time Left       : 10 minutes
+Current Route   : Lib_I--2->C_Statue--8->A4_Gate
+================
+Route between "C_Statue" and "A4_Gate" is in cache, using that...
+Journey Completed!

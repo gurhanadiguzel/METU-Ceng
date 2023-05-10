@@ -1,0 +1,9 @@
+-> Creating a linked list with default constructor.
+-> Creating a node with data 65. Node is not in the list.
+-> Inserting a node with data 66 to the list after that node.
+-> Printing the list.
+The list is empty.
+-> Printing the list in reverse order.
+The list is empty.
+-> Checking if the linked list is circular?
+yes. it is circular.

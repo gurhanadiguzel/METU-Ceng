@@ -1,0 +1,12 @@
+HT:
+[  1] [TestString] [3, 0, 1]
+[  2] [Val] [1, 2, 3]
+[  5] [VeryVeryLongTestString] []
+================
+HT:
+[  3] [Good] [3, 0, 1]
+[ 10] [Bad] [1, 2, 3]
+========After Assignment (HT0 = HT1)========
+HT:
+[  3] [Good] [3, 0, 1]
+[ 10] [Bad] [1, 2, 3]

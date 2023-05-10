@@ -1,0 +1,76 @@
+-----------------------
+INTEGER TESTING
+Creating INT Vector
+INT Vector:
+[10, 10, 10, 10]
+
+INT Vector Size: 4
+
+Changing 3th element from default to 5 (INT)
+New INT Vector:
+[10, 10, 5, 10]
+
+Changing initial value to 13. (INT)
+
+Resizing INT Vector from default to 8: 1
+New INT Vector:
+[10, 10, 5, 10, 13, 13, 13, 13]
+Resizing INT Vector from 8 to 2: 0
+New INT Vector:
+[10, 10, 5, 10, 13, 13, 13, 13]
+
+Appending 213 to vector.
+INT Vector Size: 9
+New INT Vector:
+[10, 10, 5, 10, 13, 13, 13, 13, 213]
+-----------------------
+FLOAT TESTING
+Creating FLT Vector
+FLT Vector:
+[3.14, 3.14, 3.14, 3.14]
+
+FLT Vector Size: 4
+
+Changing 3th element from default to 5.67 (FLT)
+New FLT Vector:
+[3.14, 3.14, 5.67, 3.14]
+
+Changing initial value to 13.33. (FLT)
+
+Resizing FLT Vector from default to 8: 1
+New FLT Vector:
+[3.14, 3.14, 5.67, 3.14, 13.33, 13.33, 13.33, 13.33]
+Resizing FLT Vector from 8 to 2: 0
+New FLT Vector:
+[3.14, 3.14, 5.67, 3.14, 13.33, 13.33, 13.33, 13.33]
+
+Appending 213.22 to vector.
+FLT Vector Size: 9
+New FLT Vector:
+[3.14, 3.14, 5.67, 3.14, 13.33, 13.33, 13.33, 13.33, 213.22]
+-----------------------
+STRING TESTING
+Creating STR Vector
+STR Vector:
+[OK, OK, OK, OK]
+
+STR Vector Size: 4
+
+Changing 3th element from default to 'FAIL' (STR)
+New STR Vector:
+[OK, OK, FAIL, OK]
+
+Changing initial value to 'CENG213'. (STR)
+
+Resizing STR Vector from default to 8: 1
+New STR Vector:
+[OK, OK, FAIL, OK, CENG213, CENG213, CENG213, CENG213]
+Resizing STR Vector from 8 to 2: 0
+New STR Vector:
+[OK, OK, FAIL, OK, CENG213, CENG213, CENG213, CENG213]
+
+Appending 'FINE' to vector.
+STR Vector Size: 9
+New STR Vector:
+[OK, OK, FAIL, OK, CENG213, CENG213, CENG213, CENG213, FINE]
+-----------------------

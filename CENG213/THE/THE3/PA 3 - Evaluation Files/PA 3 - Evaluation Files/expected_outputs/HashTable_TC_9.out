@@ -1,0 +1,8 @@
+HT:
+[  7] [VeryVeryLongTestString] []
+[ 11] [Val] []
+[ 24] [Watch me I am going to find this string] [1, 2, 3]
+[ 26] [Writing this on QWERTY Keyboard] [3, 0, 1]
+[ 27] [TestString] [3, 0, 1]
+========After Clear========
+HT: Empty
