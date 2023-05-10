@@ -1,0 +1,50 @@
+-> Creating a music stream with default constructor.
+-> Adding profiles to the music stream.
+-> Adding artists to the music stream.
+-> Adding albums to the music stream.
+-> Adding songs to the music stream.
+-> Creating some playlists.
+-> Adding some songs to some playlists.
+-> Printing the music stream.
+# Printing the music stream ...
+# Number of profiles is 5:
+email: jack@sophia.com | username: jack_sophia | plan: free_of_charge | playlists: [] | following: [] | followers: []
+email: archie@rosie.com | username: archie_rosie | plan: premium | playlists: [playlistId: 1 | name: archie's favorites | shared: no | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 3 | name: Do You Want to Know a Secret | duration: 116]] | following: [] | followers: []
+email: harry@isabella.com | username: harry_isabella | plan: free_of_charge | playlists: [] | following: [] | followers: []
+email: oscar@lily.com | username: oscar_lily | plan: premium | playlists: [playlistId: 2 | name: oscar's goat | shared: no | songs: [songId: 4 | name: Things We Said Today | duration: 155], playlistId: 3 | name: oscar's throwback playlist | shared: no | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 5 | name: You Can't Do That | duration: 155]] | following: [] | followers: []
+email: leo@ivy.com | username: leo_ivy | plan: free_of_charge | playlists: [] | following: [] | followers: []
+# Number of artists is 1:
+artistId: 1 | name: The Beatles | albums: [aldumId: 1 | name: Please Please Me | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 3 | name: Do You Want to Know a Secret | duration: 116], aldumId: 2 | name: A Hard Day's Night | songs: [songId: 4 | name: Things We Said Today | duration: 155, songId: 5 | name: You Can't Do That | duration: 155]]
+# Number of albums is 2:
+aldumId: 1 | name: Please Please Me | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 3 | name: Do You Want to Know a Secret | duration: 116]
+aldumId: 2 | name: A Hard Day's Night | songs: [songId: 4 | name: Things We Said Today | duration: 155, songId: 5 | name: You Can't Do That | duration: 155]
+# Number of songs is 4:
+songId: 2 | name: I Saw Here Standing There | duration: 175
+songId: 3 | name: Do You Want to Know a Secret | duration: 116
+songId: 4 | name: Things We Said Today | duration: 155
+songId: 5 | name: You Can't Do That | duration: 155
+# Printing is done.
+-> Getting a playlist.
+id must be 1. it is 1.
+name must be archie's favorites. it is archie's favorites.
+-> Playing the playlist.
+list of songs in the playlist is [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 3 | name: Do You Want to Know a Secret | duration: 116].
+-> Printing the music stream.
+# Printing the music stream ...
+# Number of profiles is 5:
+email: jack@sophia.com | username: jack_sophia | plan: free_of_charge | playlists: [] | following: [] | followers: []
+email: archie@rosie.com | username: archie_rosie | plan: premium | playlists: [playlistId: 1 | name: archie's favorites | shared: no | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 3 | name: Do You Want to Know a Secret | duration: 116]] | following: [] | followers: []
+email: harry@isabella.com | username: harry_isabella | plan: free_of_charge | playlists: [] | following: [] | followers: []
+email: oscar@lily.com | username: oscar_lily | plan: premium | playlists: [playlistId: 2 | name: oscar's goat | shared: no | songs: [songId: 4 | name: Things We Said Today | duration: 155], playlistId: 3 | name: oscar's throwback playlist | shared: no | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 5 | name: You Can't Do That | duration: 155]] | following: [] | followers: []
+email: leo@ivy.com | username: leo_ivy | plan: free_of_charge | playlists: [] | following: [] | followers: []
+# Number of artists is 1:
+artistId: 1 | name: The Beatles | albums: [aldumId: 1 | name: Please Please Me | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 3 | name: Do You Want to Know a Secret | duration: 116], aldumId: 2 | name: A Hard Day's Night | songs: [songId: 4 | name: Things We Said Today | duration: 155, songId: 5 | name: You Can't Do That | duration: 155]]
+# Number of albums is 2:
+aldumId: 1 | name: Please Please Me | songs: [songId: 2 | name: I Saw Here Standing There | duration: 175, songId: 3 | name: Do You Want to Know a Secret | duration: 116]
+aldumId: 2 | name: A Hard Day's Night | songs: [songId: 4 | name: Things We Said Today | duration: 155, songId: 5 | name: You Can't Do That | duration: 155]
+# Number of songs is 4:
+songId: 2 | name: I Saw Here Standing There | duration: 175
+songId: 3 | name: Do You Want to Know a Secret | duration: 116
+songId: 4 | name: Things We Said Today | duration: 155
+songId: 5 | name: You Can't Do That | duration: 155
+# Printing is done.

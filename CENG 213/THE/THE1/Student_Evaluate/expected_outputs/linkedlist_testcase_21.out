@@ -1,0 +1,76 @@
+-> Creating a linked list with default constructor.
+-> Making some insertions to the list.
+-> Printing the list.
+61
+62
+63
+64
+65
+-> Printing the list in reverse order.
+65
+64
+63
+62
+61
+-> Checking if the linked list is circular?
+yes. it is circular.
+-> Swapping nodes at index 0 and index 1.
+-> Printing the list.
+62
+61
+63
+64
+65
+-> Printing the list in reverse order.
+65
+64
+63
+61
+62
+-> Checking if the linked list is circular?
+yes. it is circular.
+-> Swapping nodes at index 1 and index 2.
+-> Printing the list.
+62
+63
+61
+64
+65
+-> Printing the list in reverse order.
+65
+64
+61
+63
+62
+-> Checking if the linked list is circular?
+yes. it is circular.
+-> Swapping nodes at index 2 and index 3.
+-> Printing the list.
+62
+63
+64
+61
+65
+-> Printing the list in reverse order.
+65
+61
+64
+63
+62
+-> Checking if the linked list is circular?
+yes. it is circular.
+-> Swapping nodes at index 3 and index 4.
+-> Printing the list.
+62
+63
+64
+65
+61
+-> Printing the list in reverse order.
+61
+65
+64
+63
+62
+-> Checking if the linked list is circular?
+yes. it is circular.

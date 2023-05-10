@@ -1,0 +1,31 @@
+Calculating Route(s) between "A1_Gate" and "Ceng"...
+================
+Journey         : A1_Gate->Ceng
+Current Location: A1_Gate
+Time Left       : 9 minutes
+Current Route   : A1_Gate--2->FL_I--2->Lib_I--2->C_Statue--3->Ceng
+================
+Route between "FL_I" and "Ceng" is in cache, using that...
+================
+Calculating Route(s) between "FL" and "Ceng"...
+================
+Journey         : A1_Gate->Ceng
+Current Location: FL
+Time Left       : 10 minutes
+Current Route   : FL--3->FL_I--2->Lib_I--2->C_Statue--3->Ceng
+================
+Route between "Library" and "Ceng" is in cache, using that...
+================
+Journey         : A1_Gate->Ceng
+Current Location: Library
+Time Left       : 7 minutes
+Current Route   : Library--2->EE--5->Ceng
+================
+Route between "EE" and "Ceng" is in cache, using that...
+================
+Journey         : A1_Gate->Ceng
+Current Location: EE
+Time Left       : 5 minutes
+Current Route   : EE--5->Ceng
+================
+Journey Completed!

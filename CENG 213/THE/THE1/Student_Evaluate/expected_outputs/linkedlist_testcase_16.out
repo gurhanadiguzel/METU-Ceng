@@ -1,0 +1,44 @@
+-> Creating a linked list with default constructor.
+-> Making some insertions to the list.
+-> Printing the list.
+61
+62
+63
+64
+65
+-> Printing the list in reverse order.
+65
+64
+63
+62
+61
+-> Checking if the linked list is circular?
+yes. it is circular.
+-> Getting node with data 60.
+no node with data 60 exists.
+-> Getting node with data 61.
+exists. data must be 61. it is 61.
+-> Getting node with data 62.
+exists. data must be 62. it is 62.
+-> Getting node with data 63.
+exists. data must be 63. it is 63.
+-> Getting node with data 64.
+exists. data must be 64. it is 64.
+-> Getting node with data 65.
+exists. data must be 65. it is 65.
+-> Getting node with data 66.
+no node with data 66 exists.
+-> Printing the list.
+61
+62
+63
+64
+65
+-> Printing the list in reverse order.
+65
+64
+63
+62
+61
+-> Checking if the linked list is circular?
+yes. it is circular.
