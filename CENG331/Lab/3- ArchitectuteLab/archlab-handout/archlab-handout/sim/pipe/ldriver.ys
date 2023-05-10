@@ -1,0 +1,348 @@
+#######################################################################
+# Test for copying block of size 63;
+#######################################################################
+	.pos 0
+main:	irmovq Stack, %rsp  	# Set up stack pointer
+
+	# Set up arguments for copy function and then invoke it
+	irmovq $63, %rdx		# src and dst have 63 elements
+	irmovq dest, %rsi	# dst array
+	irmovq src, %rdi	# src array
+    # corrupt all the unused registers to prevent assumptions
+    irmovq $0x5710331, %rax
+    irmovq $0x5710331, %rbx
+    irmovq $0x5710331, %rcx
+    irmovq $0x5710331, %rbp
+    irmovq $0x5710331, %r8
+    irmovq $0x5710331, %r9
+    irmovq $0x5710331, %r10
+    irmovq $0x5710331, %r11
+    irmovq $0x5710331, %r12
+    irmovq $0x5710331, %r13
+    irmovq $0x5710331, %r14
+	call abscopy		 
+	halt			# should halt with abs sum in %rax
+StartFun:
+#/* $begin abscopy-ys */
+##################################################################
+# abscopy.ys - copy the absolute values of a src block of n words to dst.
+# Return the sum of copied (absolute) values.
+#
+# Include your name and ID here.
+# Gürhan İlhan Adıgüzel 2448025
+
+# Describe how and why you modified the baseline code.
+
+##################################################################
+# Do not modify this portion
+# Function prologue.
+# %rdi = src, %rsi = dst, %rdx = n
+abscopy:
+##################################################################
+# You can modify this portion
+        # Loop header
+        xorq    %rax,%rax                       # sum = 0;
+Loop:
+        andq    %rdx, %rdx                      # check %rdx
+        jle     Done
+        rrmovq  %rdx, %rcx
+	isubq   $-9, %rcx	
+        jl      W0
+                                                # Read 9 values at a time	
+        mrmovq  (%rdi), %r8	                # Read src
+        mrmovq  8(%rdi), %r9	                # Read src + 1
+        mrmovq  16(%rdi), %r10		        # Read src + 2
+        mrmovq  24(%rdi), %r11		        # Read src + 3
+        mrmovq  32(%rdi), %r12		        # Read src + 4
+        mrmovq  40(%rdi), %r13		        # Read src + 5
+        mrmovq  48(%rdi), %r14		        # Read src + 6
+        mrmovq  56(%rdi), %rbx		        # Read src + 7
+        mrmovq  64(%rdi), %rbp		        # Read src + 8
+        
+Write:          
+        isubq   $0, %r8                         # take absolute %r8
+        addq    %r8, %rax	                # sum += %r8                       
+        rmmovq  %r8, (%rsi)			# Write src to dst    
+
+Write1:
+        isubq   $0, %r9                         # take absolute %r9
+        addq    %r9, %rax		        # sum += r9              
+        rmmovq  %r9, 8(%rsi)			# Write src + 1 to dst + 1
+
+Write2:
+        isubq   $0, %r10                        # take absolute %r10
+        addq    %r10, %rax			# sum += r10               
+        rmmovq  %r10, 16(%rsi)		        # Write src + 2 to dst + 2
+
+Write3:
+        isubq   $0, %r11                        # take absolute %r11
+        addq    %r11, %rax			# sum += r11                
+        rmmovq  %r11, 24(%rsi)		        # Write src + 3 to dst + 3
+
+Write4:
+        isubq   $0, %r12                        # take absolute %r12
+        addq    %r12, %rax			# sum += r12               
+        rmmovq  %r12, 32(%rsi)		        # Write src + 4 to dst + 4
+
+Write5:
+        isubq   $0, %r13                        # take absolute %r13
+        addq    %r13, %rax			# sum += r13                
+        rmmovq  %r13, 40(%rsi)		        # Write src + 5 to dst + 5
+
+Write6:
+        isubq   $0, %r14                        # take absolute %r14
+        addq    %r14, %rax			# sum += r14                
+        rmmovq  %r14, 48(%rsi)		        # Write src + 6 to dst + 6  
+
+Write7:
+        isubq   $0, %rbx                        # take absolute %rbx
+        addq    %rbx, %rax			# sum += rbx               
+        rmmovq  %rbx, 56(%rsi)		        # Write src + 7 to dst + 7   
+
+Write8:
+        isubq   $0, %rbp                        # take absolute %rbp
+        addq    %rbp, %rax			# sum += rbp                
+        rmmovq  %rbp, 64(%rsi)		        # Write src + 8 to dst + 8
+
+Write9:
+        isubq   $-9, %rdx                       # decrease %rdx by 9 
+        irmovq  $72, %rcx                       
+        addq    %rcx, %rdi			# Increase src pointer by 72
+	addq    %rcx, %rsi			# Increase dst pointer by 72
+	jmp     Loop				# Jump to start of the loop
+
+W0:        
+        mrmovq  (%rdi), %r8	                # Read src
+        isubq   $0, %r8                         # take absolute %r8
+        addq    %r8, %rax			# sum += %r8
+        rmmovq  %r8, (%rsi)			# Write src to dst                
+        isubq   $-1, %rdx	
+        jle     Done
+
+W1:       
+        mrmovq  8(%rdi), %r9	                # Read src + 1
+        isubq   $0, %r9                         # take absolute %r9
+        addq    %r9, %rax			# sum += %r9
+        rmmovq  %r9, 8(%rsi)			# Write src + 1 to dst + 1             
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W2:        
+        mrmovq  16(%rdi), %r10	                # Read src + 2 
+        isubq   $0, %r10                        # take absolute %r10
+        addq    %r10, %rax			# sum += %r10
+        rmmovq  %r10, 16(%rsi)		        # Write src + 2 to dst + 2                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W3:        
+        mrmovq  24(%rdi), %r11	                # Read src + 3
+        isubq   $0, %r11                        # take absolute %r11
+        addq    %r11, %rax			# sum += %r11
+        rmmovq  %r11, 24(%rsi)			# Write src + 3 to dst + 3               
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W4:        
+        mrmovq  32(%rdi), %r12	                # Read src + 4
+        isubq   $0, %r12                        # take absolute %r12
+        addq    %r12, %rax			# sum += %r12
+        rmmovq  %r12, 32(%rsi)			# Write src + 4 to dst + 4                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W5:        
+        mrmovq  40(%rdi), %r13	                # Read src + 5
+        isubq   $0, %r13                        # take absolute %r13
+        addq    %r13, %rax			# sum += %r13
+        rmmovq  %r13, 40(%rsi)			# Write src + 5 to dst + 5                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W6:        
+        mrmovq  48(%rdi), %r14	                # Read src + 6
+        isubq   $0, %r14                        # take absolute %r14
+        addq    %r14, %rax			# sum += %r14
+        rmmovq  %r14, 48(%rsi)			# Write src + 6 to dst + 6                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W7:        
+        mrmovq  56(%rdi), %rbx	                # Read src + 7
+        isubq   $0, %rbx                        # take absolute %rbx
+        addq    %rbx, %rax		        # sum += %rbx
+        rmmovq  %rbx, 56(%rsi)			# Write src + 7 to dst + 7                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+##################################################################
+# Do not modify the following section of code
+# Function epilogue.
+Done:
+        ret
+##################################################################
+# Keep the following label at the end of your function
+End:
+#/* $end abscopy-ys */
+EndFun:
+
+###############################
+# Source and destination blocks 
+###############################
+	.align 8
+src:
+	.quad 1
+	.quad -2
+	.quad 3
+	.quad -4
+	.quad 5
+	.quad 6
+	.quad 7
+	.quad -8
+	.quad -9
+	.quad 10
+	.quad -11
+	.quad -12
+	.quad -13
+	.quad -14
+	.quad -15
+	.quad 16
+	.quad -17
+	.quad 18
+	.quad -19
+	.quad 20
+	.quad 21
+	.quad -22
+	.quad 23
+	.quad 24
+	.quad 25
+	.quad 26
+	.quad -27
+	.quad -28
+	.quad -29
+	.quad 30
+	.quad 31
+	.quad -32
+	.quad 33
+	.quad 34
+	.quad 35
+	.quad -36
+	.quad -37
+	.quad 38
+	.quad 39
+	.quad 40
+	.quad 41
+	.quad -42
+	.quad 43
+	.quad 44
+	.quad 45
+	.quad 46
+	.quad 47
+	.quad 48
+	.quad 49
+	.quad 50
+	.quad -51
+	.quad -52
+	.quad -53
+	.quad -54
+	.quad -55
+	.quad -56
+	.quad -57
+	.quad -58
+	.quad -59
+	.quad -60
+	.quad -61
+	.quad -62
+	.quad -63
+	.quad 0xbcdefa # This shouldn't get moved
+
+	.align 16
+Predest:
+	.quad 0xbcdefa
+dest:
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+	.quad 0xcdefab
+Postdest:
+	.quad 0xdefabc
+
+.align 8
+# Run time stack
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+	.quad 0
+
+Stack:

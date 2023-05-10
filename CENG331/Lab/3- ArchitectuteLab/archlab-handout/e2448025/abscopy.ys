@@ -1,0 +1,187 @@
+#/* $begin abscopy-ys */
+##################################################################
+# abscopy.ys - copy the absolute values of a src block of n words to dst.
+# Return the sum of copied (absolute) values.
+#
+# Include your name and ID here.
+# Gürhan İlhan Adıgüzel
+# 2448025
+#
+# Describe how and why you modified the baseline code.bag
+#
+# I started by removing several instructions that weren't necessary and moving some to the top.
+# Then, in order to read and write data in bulk, I divided the main function into several loops.
+# I would have used more elements and registers at a time but I used %rcx register to hold a constant number.
+# In the Loop, I check whether the %rdx is greater than 9 or not.
+#
+# If  %rdx is greater than or equal to 9, I can go to the loop and then
+# I load 9 values into register together.
+# After that, I get the absolute value of eaxh register using ISUBQ function which I was declared 
+# into the  pipe-hcl file. Then I take the absolute value of registers  and add to %rax register 
+# then write into the correct destination.
+#
+# If the %rdx is less than 9, I go to 'W' part of code.
+# First of all, I add 9 into %rdx register to get rid of the negative value of %rdx because 
+# I subtracted 9 to check it. If %rdx == 0, it means I have already finished the computations and go Done.
+# On the other hand, in every step, I  read the element from source, then take the absolute value,
+# and then, add it to %rax register, lastly put it into correct destination and decrease %rdx by 1.
+# I keep doing it until %rdx will be 0. 
+#
+# Removing of unnecessary instructions  -> Reduced CPE from 16.94 to around 13.30 
+# Adding ISUBQ implementation -> Reduced CPE from 13.30 to 10.10
+# Changing ISUBQ implementation for taking absolute (with both doing adding and subtracting) -> Reduced CPE from 10.10 to 8.23.
+# Changing %rdx control mechanism and extracting it from loop -> Reduced CPE from 8.23 to 7.20.
+# As a result, I got average CPE as 7.20.  
+#
+##################################################################
+# Do not modify this portion
+# Function prologue.
+# %rdi = src, %rsi = dst, %rdx = n
+abscopy:
+##################################################################
+# You can modify this portion
+        # Loop header
+        xorq    %rax,%rax                       # sum = 0;
+        irmovq  $72, %rcx                       # %rcx = 72
+Loop:
+	isubq   $-9, %rdx	                # %rdx -= 9
+        jl      W                               # if less than 9, jump W
+        # Read 9 values at a time	
+        mrmovq  (%rdi), %r8	                # Read src
+        mrmovq  8(%rdi), %r9	                # Read src + 1
+        mrmovq  16(%rdi), %r10		        # Read src + 2
+        mrmovq  24(%rdi), %r11		        # Read src + 3
+        mrmovq  32(%rdi), %r12		        # Read src + 4
+        mrmovq  40(%rdi), %r13		        # Read src + 5
+        mrmovq  48(%rdi), %r14		        # Read src + 6
+        mrmovq  56(%rdi), %rbx		        # Read src + 7
+        mrmovq  64(%rdi), %rbp		        # Read src + 8
+        
+Write:          
+        isubq   $0, %r8                         # take absolute %r8
+        addq    %r8, %rax	                # sum += %r8                       
+        rmmovq  %r8, (%rsi)			# Write src to dst    
+
+Write1:
+        isubq   $0, %r9                         # take absolute %r9
+        addq    %r9, %rax		        # sum += r9              
+        rmmovq  %r9, 8(%rsi)			# Write src + 1 to dst + 1
+
+Write2:
+        isubq   $0, %r10                        # take absolute %r10
+        addq    %r10, %rax			# sum += r10               
+        rmmovq  %r10, 16(%rsi)		        # Write src + 2 to dst + 2
+
+Write3:
+        isubq   $0, %r11                        # take absolute %r11
+        addq    %r11, %rax			# sum += r11                
+        rmmovq  %r11, 24(%rsi)		        # Write src + 3 to dst + 3
+
+Write4:
+        isubq   $0, %r12                        # take absolute %r12
+        addq    %r12, %rax			# sum += r12               
+        rmmovq  %r12, 32(%rsi)		        # Write src + 4 to dst + 4
+
+Write5:
+        isubq   $0, %r13                        # take absolute %r13
+        addq    %r13, %rax			# sum += r13                
+        rmmovq  %r13, 40(%rsi)		        # Write src + 5 to dst + 5
+
+Write6:
+        isubq   $0, %r14                        # take absolute %r14
+        addq    %r14, %rax			# sum += r14                
+        rmmovq  %r14, 48(%rsi)		        # Write src + 6 to dst + 6  
+
+Write7:
+        isubq   $0, %rbx                        # take absolute %rbx
+        addq    %rbx, %rax			# sum += rbx               
+        rmmovq  %rbx, 56(%rsi)		        # Write src + 7 to dst + 7   
+
+Write8:
+        isubq   $0, %rbp                        # take absolute %rbp
+        addq    %rbp, %rax			# sum += rbp                
+        rmmovq  %rbp, 64(%rsi)		        # Write src + 8 to dst + 8
+
+Pointer:
+        addq    %rcx, %rdi			# Increase src pointer by 72
+	addq    %rcx, %rsi			# Increase dst pointer by 72
+	jmp     Loop				# Jump to start of the loop
+
+W:            
+        irmovq  $9, %rcx                        # %rcx  = 9
+        addq    %rcx, %rdx                      # %rdx += 9
+        andq    %rdx, %rdx                      # check %rdx
+        je     Done                             # if 0, jump Done
+        
+W0:     mrmovq  (%rdi), %r8	                # Read src
+        isubq   $0, %r8                         # take absolute %r8
+        addq    %r8, %rax			# sum += %r8
+        rmmovq  %r8, (%rsi)			# Write src to dst                
+        isubq   $-1, %rdx	                # decrease %rdx by 1
+        jle     Done
+
+W1:       
+        mrmovq  8(%rdi), %r9	                # Read src + 1
+        isubq   $0, %r9                         # take absolute %r9
+        addq    %r9, %rax			# sum += %r9
+        rmmovq  %r9, 8(%rsi)			# Write src + 1 to dst + 1             
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W2:        
+        mrmovq  16(%rdi), %r10	                # Read src + 2 
+        isubq   $0, %r10                        # take absolute %r10
+        addq    %r10, %rax			# sum += %r10
+        rmmovq  %r10, 16(%rsi)		        # Write src + 2 to dst + 2                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W3:        
+        mrmovq  24(%rdi), %r11	                # Read src + 3
+        isubq   $0, %r11                        # take absolute %r11
+        addq    %r11, %rax			# sum += %r11
+        rmmovq  %r11, 24(%rsi)			# Write src + 3 to dst + 3               
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W4:        
+        mrmovq  32(%rdi), %r12	                # Read src + 4
+        isubq   $0, %r12                        # take absolute %r12
+        addq    %r12, %rax			# sum += %r12
+        rmmovq  %r12, 32(%rsi)			# Write src + 4 to dst + 4                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W5:        
+        mrmovq  40(%rdi), %r13	                # Read src + 5
+        isubq   $0, %r13                        # take absolute %r13
+        addq    %r13, %rax			# sum += %r13
+        rmmovq  %r13, 40(%rsi)			# Write src + 5 to dst + 5                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W6:        
+        mrmovq  48(%rdi), %r14	                # Read src + 6
+        isubq   $0, %r14                        # take absolute %r14
+        addq    %r14, %rax			# sum += %r14
+        rmmovq  %r14, 48(%rsi)			# Write src + 6 to dst + 6                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+W7:        
+        mrmovq  56(%rdi), %rbx	                # Read src + 7
+        isubq   $0, %rbx                        # take absolute %rbx
+        addq    %rbx, %rax		        # sum += %rbx
+        rmmovq  %rbx, 56(%rsi)			# Write src + 7 to dst + 7                
+	isubq   $-1, %rdx	                # decrease %rdx by 1 
+        jle     Done
+
+##################################################################
+# Do not modify the following section of code
+# Function epilogue.
+Done:
+        ret
+##################################################################
+# Keep the following label at the end of your function
+End:
+#/* $end abscopy-ys */
