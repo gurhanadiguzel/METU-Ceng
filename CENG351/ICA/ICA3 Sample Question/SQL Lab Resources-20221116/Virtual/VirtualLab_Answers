@@ -1,0 +1,164 @@
+A1-
+SELECT DISTINCT S.sid
+FROM Sailors S, Reserves R
+WHERE S.sid = R.sid
+ORDER BY S.sid;
+
+A2- 
+SELECT DISTINCT S.sid
+FROM Sailors S, Reserves R, Boats B
+WHERE S.sid = R.sid 
+    AND R.bid = B.bid 
+    AND (B.color = 'green' OR B.color = 'red')
+ORDER BY S.sid;
+
+A3- 
+SELECT DISTINCT S.sid
+FROM Sailors S, Reserves R, Boats B
+WHERE S.sid = R.sid 
+    AND R.bid = B.bid
+    AND B.color = 'red'
+INTERSECT
+SELECT DISTINCT S.sid
+FROM Sailors S, Reserves R, Boats B
+WHERE S.sid = R.sid 
+    AND R.bid = B.bid
+    AND B.color = 'green'
+ORDER BY S.sid;
+
+A4-
+SELECT DISTINCT new.sname
+FROM (  SELECT DISTINCT S.sid, S.sname 
+        FROM Sailors S, Reserves R, Boats B
+        WHERE S.sid = R.sid 
+            AND R.bid = B.bid
+            AND B.color = 'red'
+        INTERSECT
+        SELECT DISTINCT S1.sid, S1.sname
+        FROM Sailors S1, Reserves R1, Boats B1
+        WHERE S1.sid = R1.sid 
+            AND R1.bid = B1.bid
+            AND B1.color = 'green') AS new
+ORDER BY S2.sname;
+*********
+SELECT DISTINCT S2.sname
+FROM Sailors S2
+WHERE S2.sid IN(SELECT DISTINCT S.sid
+                FROM Sailors S, Reserves R, Boats B
+                WHERE S.sid = R.sid 
+                    AND R.bid = B.bid
+                    AND B.color = 'red'
+                INTERSECT
+                SELECT DISTINCT S1.sid
+                FROM Sailors S1, Reserves R1, Boats B1
+                WHERE S1.sid = R1.sid 
+                    AND R1.bid = B1.bid
+                    AND B1.color = 'green')
+ORDER BY S2.sname;
+***********
+
+A5-
+SELECT DISTINCT S.sname
+FROM Sailors S, Reserves R
+WHERE  S.sid = R.sid AND R.bid = 103
+ORDER BY S.sname;
+
+A6-
+SELECT DISTINCT S.sid, S.sname, S.rating, S.age
+FROM Sailors S
+WHERE S.rating > (  SELECT DISTINCT MIN(S1.rating)
+                    FROM Sailors S1
+                    WHERE S1.sname = 'Horatio');
+ORDER BY S.sid, S.sname, S.rating, S.age;
+
+A7- 
+SELECT DISTINCT S.sid, S.sname, S.rating, S.age
+FROM Sailors S
+WHERE S.rating > (  SELECT DISTINCT MAX(S1.rating)
+                    FROM Sailors S1
+                    WHERE S1.sname = 'Horatio');
+ORDER BY S.sid, S.sname, S.rating, S.age;
+
+A8-
+SELECT DISTINCT * 
+FROM Sailors S
+WHERE S.rating = (  SELECT DISTINCT MAX(S1.rating)
+                    FROM Sailors S1);
+
+A9-
+SELECT DISTINCT S.sname 
+FROM Sailors S
+WHERE NOT EXISTS (  SELECT B.bid 
+                    FROM Boats B
+                    EXCEPT 
+                    SELECT R.bid
+                    FROM Reserves R
+                    WHERE R.sid = S.sid)
+ORDER BY S.sname;
+
+A10- 
+SELECT S.sname, S.age
+FROM Sailors S
+WHERE S.age = ( SELECT MAX(S1.age) 
+                FROM Sailors S1)
+ORDER BY S.sname, S.age;
+
+A11- 
+SELECT S2.rating, MIN(S2.age)
+FROM Sailors S2, Sailors S3
+WHERE S2.rating = S3.rating 
+    AND S2.sid <> S3.sid
+    AND S2.age >= 18 AND S3.age >= 18
+GROUP BY S2.rating
+ORDER BY S2.rating, S2.age;
+********
+SELECT S.rating, MIN (S.age)
+FROM Sailors S
+WHERE S.age >= 18
+GROUP BY S.rating
+HAVING COUNT (*) > 1
+order by S.rating, S.age;
+********
+
+A12- 
+SELECT B.bid, COUNT (*) AS rcount
+FROM Reserves R, Boats B
+WHERE B.color = 'red' AND R.bid = B.bid 
+GROUP BY B.bid
+ORDER BY B.bid , rcount;   
+********
+SELECT B.bid, COUNT (*) AS scount
+FROM Sailors S, Boats B, Reserves R
+WHERE S.sid=R.sid AND R.bid=B.bid AND B.color='red'
+GROUP BY B.bid
+order by b.bid, scount;
+********
+
+A13- 
+SELECT S2.rating, MIN(S2.age)
+FROM Sailors S2, Sailors S3
+WHERE S2.rating = S3.rating 
+    AND S2.sid <> S3.sid
+    AND S2.age >= 18
+GROUP BY S2.rating
+ORDER BY S2.rating, S2.age;
+********
+SELECT S.rating, MIN (S.age)
+FROM Sailors S
+WHERE S.age >= 18
+GROUP BY S.rating HAVING 1 < (SELECT COUNT (*)
+                            FROM Sailors S2
+                            WHERE S.rating=S2.rating )
+ORDER BY S.rating, MIN (S.age);
+********
+
+A14 - ???
+SELECT S.rating , AVG(S.age)
+FROM Sailors S
+GROUP BY S.rating
+HAVING AVG(age) = ( SELECT MIN (avgage)
+                    FROM (  SELECT AVG(S.age) AS avgage 
+                            FROM Sailors S
+                            GROUP BY S.rating))
+ORDER BY rating, AVG(age);
+
