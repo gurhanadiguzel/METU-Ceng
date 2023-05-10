@@ -1,5 +1,0 @@
-
-Apartment Name: G, Max Bandwidth: 360
-(id: 273, initial_bandwith: 14, is_empty: 0) (id: 369, initial_bandwith: 21, is_empty: 0) (id: 452, initial_bandwith: 26, is_empty: 0) (id: 357, initial_bandwith: 15, is_empty: 0) (id: 486, initial_bandwith: 17, is_empty: 0) (id: 217, initial_bandwith: 21, is_empty: 0) (id: 254, initial_bandwith: 15, is_empty: 0) (id: 172, initial_bandwith: 23, is_empty: 0) 
-backwards
-(id: 172, initial_bandwith: 23, is_empty: 0)(id: 254, initial_bandwith: 15, is_empty: 0)(id: 217, initial_bandwith: 21, is_empty: 0)(id: 486, initial_bandwith: 17, is_empty: 0)(id: 357, initial_bandwith: 15, is_empty: 0)(id: 452, initial_bandwith: 26, is_empty: 0)(id: 369, initial_bandwith: 21, is_empty: 0)(id: 273, initial_bandwith: 14, is_empty: 0)

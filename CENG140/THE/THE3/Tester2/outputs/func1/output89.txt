@@ -1,7 +1,0 @@
-
-Apartment Name: F, Max Bandwidth: 120
-(id: 37, initial_bandwith: 12, is_empty: 0) (id: 273, initial_bandwith: 11, is_empty: 0) (id: 193, initial_bandwith: 10, is_empty: 0) (id: 217, initial_bandwith: 5, is_empty: 0) (id: 165, initial_bandwith: 9, is_empty: 0) (id: 199, initial_bandwith: 11, is_empty: 0) (id: 401, initial_bandwith: 1, is_empty: 0) (id: 490, initial_bandwith: 7, is_empty: 0) (id: 459, initial_bandwith: 9, is_empty: 0) (id: 201, initial_bandwith: 11, is_empty: 0) 
-backwards
-(id: 201, initial_bandwith: 11, is_empty: 0)(id: 459, initial_bandwith: 9, is_empty: 0)(id: 490, initial_bandwith: 7, is_empty: 0)(id: 401, initial_bandwith: 1, is_empty: 0)(id: 199, initial_bandwith: 11, is_empty: 0)(id: 165, initial_bandwith: 9, is_empty: 0)(id: 217, initial_bandwith: 5, is_empty: 0)(id: 193, initial_bandwith: 10, is_empty: 0)(id: 273, initial_bandwith: 11, is_empty: 0)(id: 37, initial_bandwith: 12, is_empty: 0)
-
-Apartment Name: New Apartment, Max Bandwidth: 300

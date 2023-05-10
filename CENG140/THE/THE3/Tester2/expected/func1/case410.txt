@@ -1,4 +1,0 @@
-
-Apartment Name: E, Max Bandwidth: 340
-
-Apartment Name: New Apartment, Max Bandwidth: 300

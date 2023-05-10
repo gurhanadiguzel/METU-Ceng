@@ -1,5 +1,0 @@
-
-Apartment Name: P, Max Bandwidth: 360
-(id: 415, initial_bandwith: 247, is_empty: 0) 
-backwards
-(id: 415, initial_bandwith: 247, is_empty: 0)

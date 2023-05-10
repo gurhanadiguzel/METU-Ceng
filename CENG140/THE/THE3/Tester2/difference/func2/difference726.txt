@@ -1,8 +1,0 @@
-Expected Output:
-
-Apartment Name: K, Max Bandwidth: 240
-(id: 195, initial_bandwith: 0, is_empty: 0) 
-backwards
-(id: 195, initial_bandwith: 0, is_empty: 0)
-
-Given Output:
