@@ -1,8 +1,0 @@
--> Creating a linked list with default constructor.
--> Inserting a node with data 65 to the end of the list.
--> Printing the list.
-65
--> Printing the list in reverse order.
-65
--> Checking if the linked list is circular?
-yes. it is circular.

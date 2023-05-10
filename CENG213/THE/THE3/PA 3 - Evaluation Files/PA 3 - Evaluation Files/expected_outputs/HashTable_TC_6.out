@@ -1,9 +1,0 @@
-HT:
-[  1] [TestString] [3, 0, 1]
-[  2] [Val] [1, 2, 3]
-[  5] [VeryVeryLongTestString] []
-========After Copy========
-HT:
-[  1] [TestString] [3, 0, 1]
-[  2] [Val] [1, 2, 3]
-[  5] [VeryVeryLongTestString] []
