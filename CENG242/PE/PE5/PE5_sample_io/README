@@ -1,0 +1,5 @@
+If you work in your local machine, compile the code with the following command:
+    g++ sample.cpp highSpeedTrain.cpp -o sample -Wall -std=c++11
+
+Then call the executable with the index of the testcase as:
+    ./sample 3

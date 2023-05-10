@@ -1,0 +1,312 @@
+
+=== Test cases for sum_age/2 ===
+
+?- sum_age([], Age).
+Age = 0.
+
+?- sum_age([daniel], Age).
+28])
+
+?- sum_age([margaret, william, ashley, nancy, susan, paul, john, joshua, robert], Age).
+Age = 291.
+
+?- sum_age([christopher, robert], Age).
+Age = 57.
+
+?- sum_age([matthew, anthony, lisa, jessica, andrew, patricia, mary, david], Age).
+Age = 249.
+
+?- sum_age([betty, mark, kimberly, donna, barbara], Age).
+Age = 159.
+
+?- sum_age([emily, elizabeth, jennifer, james, betty, thomas, donna, susan, william], Age).
+Age = 299.
+
+?- sum_age([charles, betty, margaret], Age).
+Age = 100.
+
+?- sum_age([jessica, linda, joshua], Age).
+Age = 96.
+
+?- sum_age([william, jessica, karen, michael, kimberly, ashley, joshua], Age).
+Age = 236.
+
+?- sum_age([david, donna, kimberly, margaret, paul, michael], Age).
+Age = 194.
+
+?- sum_age([christopher, david, michael, richard, steven, karen, james], Age).
+Age = 236.
+
+?- sum_age([ashley, james, christopher, betty], Age).
+Age = 125.
+
+?- sum_age([donald, daniel, barbara, thomas, karen, ashley], Age).
+Age = 201.
+
+?- sum_age([susan], Age).
+Age = 25.
+
+?- sum_age([christopher, ashley, joshua, emily, mary, andrew, david, thomas], Age).
+Age = 264.
+
+?- sum_age([james, lisa, joseph, mark, jessica], Age).
+Age = 166.
+
+?- sum_age([richard, david, nancy], Age).
+Age = 96.
+
+?- sum_age([sarah, nancy, michelle, andrew, lisa, emily, susan, jennifer], Age).
+Age = 260.
+
+?- sum_age([elizabeth, mark, sandra, ashley, andrew, james, robert, matthew, michael, linda], Age).
+Age = 326.
+
+?- sum_age([joseph, jessica, elizabeth, matthew, james, william, nancy, michael, margaret], Age).
+Age = 294.
+
+?- sum_age([james, andrew, john, steven, anthony, paul, lisa, jennifer, sarah], Age).
+Age = 300.
+
+?- sum_age([linda, andrew, jessica, donna, william, richard, mark], Age).
+Age = 212.
+
+?- sum_age([matthew, susan, ashley, paul, barbara, daniel, mark], Age).
+Age = 227.
+
+?- sum_age([margaret, sarah, james, elizabeth, daniel, thomas, emily, barbara, jennifer], Age).
+Age = 293.
+
+?- sum_age([andrew, susan, donna, kimberly, anthony, thomas, matthew, richard, christopher], Age).
+Age = 269.
+
+?- sum_age([jennifer, john, david, kimberly, donald, linda], Age).
+Age = 191.
+
+?- sum_age([susan, lisa, patricia, linda, andrew, william], Age).
+Age = 187.
+
+?- sum_age([andrew, robert, mark, richard], Age).
+Age = 125.
+
+?- sum_age([james, barbara, betty, sarah, donald, margaret, sandra], Age).
+Age = 216.
+
+
+
+
+=== Test cases for max_age_of_hobby/3 ===
+
+?- max_age_of_hobby( [ ] , reading , Age ).
+Age = 0.
+
+?- max_age_of_hobby([mary, susan, sarah, jessica, robert, donna, matthew] , fishing , Age ).
+Age = 31.
+
+?- max_age_of_hobby([betty, joseph, nancy, lisa, sandra] , collecting , Age ).
+Age = 30.
+
+?- max_age_of_hobby([lisa, daniel, sandra, charles, william, michael, steven] , gardening , Age ).
+Age = 28.
+
+?- max_age_of_hobby([mary, nancy, thomas, charles, kimberly, patricia, anthony, robert, donald, jennifer] , fishing , Age ).
+Age = 40.
+
+?- max_age_of_hobby([donald, lisa, michelle, richard, christopher, jennifer] , travelling , Age ).
+Age = 33.
+
+?- max_age_of_hobby([christopher, sandra, richard, mark, andrew, robert, emily, nancy] , bird_watching , Age ).
+Age = 37.
+
+?- max_age_of_hobby([joseph, michelle, linda, betty, paul, joshua, william, elizabeth] , television , Age ).
+Age = 39.
+
+?- max_age_of_hobby([thomas, linda, daniel, david, kimberly, mark, jessica, joshua, donald, charles] , gardening , Age ).
+Age = 28.
+
+?- max_age_of_hobby([susan, andrew, joseph, anthony, karen, barbara, john] , crafting , Age ).
+Age = 37.
+
+?- max_age_of_hobby([matthew, william, richard, donald, susan] , television , Age ).
+Age = 37.
+
+?- max_age_of_hobby([mary] , gardening , Age ).
+Age = 27.
+
+?- max_age_of_hobby([donald, anthony, susan] , television , Age ).
+Age = 29.
+
+?- max_age_of_hobby([donna, jessica, elizabeth] , video_games , Age ).
+Age = 27.
+
+?- max_age_of_hobby([charles, richard, mark, robert, daniel, sarah, kimberly] , bird_watching , Age ).
+Age = 37.
+
+?- max_age_of_hobby([steven, donald, david, anthony, christopher, patricia, jessica, linda] , collecting , Age ).
+Age = 40.
+
+?- max_age_of_hobby([susan, matthew, karen, linda, jennifer, michael, joseph] , reading , Age ).
+Age = 30.
+
+?- max_age_of_hobby([betty, sandra, anthony, donald, nancy, mary] , television , Age ).
+Age = 29.
+
+?- max_age_of_hobby([sandra, william, joseph] , crafting , Age ).
+Age = 37.
+
+?- max_age_of_hobby([elizabeth, richard, joseph] , reading , Age ).
+Age = 39.
+
+?- max_age_of_hobby([richard, kimberly, robert, andrew, michelle, christopher, margaret] , bird_watching , Age ).
+Age = 31.
+
+?- max_age_of_hobby([linda, james, jessica, michelle, donald, mary, andrew, michael, christopher] , television , Age ).
+Age = 38.
+
+?- max_age_of_hobby([andrew, linda, david, elizabeth, kimberly, james, jessica, margaret, anthony, nancy] , travelling , Age ).
+Age = 27.
+
+?- max_age_of_hobby([mark, andrew, joshua, sarah, christopher] , music , Age ).
+Age = 26.
+
+?- max_age_of_hobby([jessica, margaret] , bird_watching , Age ).
+Age = 25.
+
+?- max_age_of_hobby([mark, karen, andrew, michelle, sarah, jennifer] , fishing , Age ).
+Age = 35.
+
+?- max_age_of_hobby([mark, jennifer, michelle, betty, michael, thomas, linda, elizabeth] , gardening , Age ).
+Age = 39.
+
+?- max_age_of_hobby([thomas, david, daniel, joshua, andrew, joseph, barbara, jennifer, karen, paul] , music , Age ).
+Age = 39.
+
+?- max_age_of_hobby([karen, ashley, david, michael, paul, donna, mark, jennifer, john, joseph] , television , Age )..
+Age = 38.
+
+?- max_age_of_hobby([sandra, thomas, donna, joseph] , video_games , Age ).
+Age = 27.
+
+?- max_age_of_hobby([betty, paul, patricia, lisa, andrew, mark, charles, matthew] , reading , Age ).
+Age = 39.
+
+?- max_age_of_hobby([michelle, christopher, andrew, lisa] , bird_watching , Age ).
+Age = 40.
+
+?- max_age_of_hobby([william, john, donald, andrew, steven, thomas, paul] , fishing , Age ).
+Age = 40.
+
+?- max_age_of_hobby([andrew, james, susan, robert, donna, sandra, lisa] , television , Age ).
+Age = 26.
+
+?- max_age_of_hobby([emily, christopher, michelle] , fishing , Age ).
+Age = 35.
+
+
+
+=== Test cases for max_age_of_hobby/3 ===
+
+?- person_in_range([], 20, 25, Res).
+Res = [].
+
+?- person_in_range([jennifer, steven, emily], 23, 31, Res).
+Res = [jennifer].
+
+?- person_in_range([susan, william, betty], 26, 42, Res).
+Res = [william, betty].
+
+?- person_in_range([ashley, christopher, richard], 31, 41, Res).
+Res = [ashley, richard].
+
+?- person_in_range([thomas, mary, william], 20, 39, Res).
+Res = [mary, william].
+
+?- person_in_range([lisa, nancy, steven], 22, 33, Res).
+Res = [nancy].
+
+?- person_in_range([william, jennifer, christopher], 28, 35, Res).
+Res = [william, jennifer].
+
+?- person_in_range([linda, karen, charles], 20, 33, Res).
+Res = [linda].
+
+?- person_in_range([susan, james, richard], 31, 31, Res).
+Res = [richard].
+
+?- person_in_range([sarah, andrew, kimberly], 27, 41, Res).
+Res = [sarah, kimberly].
+
+?- person_in_range([john, daniel, paul], 29, 41, Res).
+Res = [john, paul].
+
+?- person_in_range([nancy, patricia, kimberly], 30, 43, Res).
+Res = [nancy, patricia].
+
+?- person_in_range([patricia, richard, sarah], 20, 34, Res).
+Res = [patricia, richard].
+
+?- person_in_range([michael, joshua, charles], 21, 38, Res).
+Res = [michael, charles].
+
+?- person_in_range([donald, anthony, james], 21, 27, Res).
+Res = [james].
+
+?- person_in_range([joseph, christopher, karen], 37, 45, Res).
+Res = [joseph, karen].
+
+?- person_in_range([steven, donald, linda], 26, 32, Res).
+Res = [linda].
+
+?- person_in_range([christopher, robert, elizabeth], 38, 41, Res).
+Res = [elizabeth].
+
+?- person_in_range([betty, andrew, patricia, kimberly, james, donald], 27, 41, Res).
+Res = [betty, patricia, kimberly, james, donald].
+
+?- person_in_range([james, donald, matthew, lisa, andrew, william, sandra, barbara], 23, 36, Res).
+Res = [james, donald, andrew, william, sandra, barbara].
+
+?- person_in_range([michelle, michael, patricia, sandra, nancy], 36, 38, Res).
+Res = [michael].
+
+?- person_in_range([kimberly, betty, anthony, linda, jessica, margaret, michelle, christopher, matthew, karen], 31, 42, Res).
+Res = [betty, linda, michelle, matthew, karen].
+
+?- person_in_range([michelle, michael, robert, kimberly, jennifer, mark], 28, 31, Res).
+Res = [robert, kimberly, jennifer].
+
+?- person_in_range([mary, paul, richard, joshua, thomas, sandra, barbara, susan, matthew], 26, 30, Res).
+Res = [mary, sandra, barbara].
+
+?- person_in_range([michelle, nancy, james, steven, barbara, john, christopher, sandra], 22, 29, Res).
+Res = [james, barbara, christopher, sandra].
+
+?- person_in_range([daniel, linda, richard, james, matthew, ashley, donna], 28, 35, Res).
+Res = [daniel, linda, richard, ashley].
+
+?- person_in_range([robert, andrew, jennifer, anthony, steven, charles, ashley, michael], 26, 36, Res).
+Res = [robert, andrew, jennifer, anthony, charles, ashley].
+
+?- person_in_range([donna, kimberly, joshua], 24, 35, Res).
+Res = [donna, kimberly].
+
+?- person_in_range([jessica, steven, paul, richard, lisa, emily], 29, 40, Res).
+Res = [steven, paul, richard, lisa, emily].
+
+?- person_in_range([christopher, karen, daniel, robert], 28, 31, Res).
+Res = [daniel, robert].
+
+?- person_in_range([jennifer, james, joshua], 28, 37, Res).
+Res = [jennifer].
+
+?- person_in_range([michael, joshua, anthony, christopher, david, margaret, susan, william], 29, 43, Res).
+Res = [michael, joshua, anthony, david, william].
+
+?- person_in_range([andrew, susan, steven, elizabeth, sarah, lisa, ashley, jennifer, nancy, daniel], 23, 38, Res).
+Res = [andrew, susan, sarah, ashley, jennifer, nancy, daniel].
+
+?- person_in_range([donald, steven, emily, thomas, andrew, richard, jennifer], 31, 36, Res).
+Res = [donald, richard].
+
+?- person_in_range([sarah, jessica, matthew, anthony, andrew, jennifer, mark, richard, thomas], 20, 27, Res).
+Res = [jessica, andrew].
+
