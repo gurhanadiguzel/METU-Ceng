@@ -53,7 +53,7 @@ Homework 2}
     \begin{enumerate}
     % Write your solutions in the following items.
         \item %write the solution of q1a
-        \\\\ $\int x(t) - 5y(t) \,dt = y(t)$
+        \\\\ $ x(t) =  5y(t) + y'(t)$
         \\\\
         \item %write the solution of q1b
         \\\\ By getting the differential of the equation above, we get:
@@ -86,7 +86,7 @@ Homework 2}
         \begin{align*}
                 y[n] &= x[n] * h[n]
                 \\ &= \sum_{k=-\infty}^{\infty} x[k] . h[n-k]
-                \\ &= \sum_{k=-\infty}^{\infty} (2\delta[k] . \delta[n-k-1] + 2\delta[k+1] . \delta[n-k-1] + \delta[k+1] . 2\delta[n-k+1])
+                \\ &= \sum_{k=-\infty}^{\infty} (2\delta[k] . \delta[n-k-1] + 4\delta[k].\delta[n-k+1] + \delta[k+1] . \delta[n-k-1] + \delta[k+1] . 2\delta[n-k+1])
                 \\ &= 2 \sum_{k=-\infty}^{\infty} \delta[k] . \delta[n-k-1] + 4 \sum_{k=-\infty}^{\infty} \delta[k] . \delta[n-k+1] +  \sum_{k=-\infty}^{\infty} \delta[k+1] . \delta[n-k-1] + 2 \sum_{k=-\infty}^{\infty} \delta[k+1] . \delta[n-k+1]
                 \\\\ &=2.\delta[n-1] + 4.\delta[n+1] + \delta[n] + 2.\delta[n+2]
                 \\\\ y[n] &= 2.\delta[n-1] + \delta[n] + 4.\delta[n+1] + 2.\delta[n+2]
