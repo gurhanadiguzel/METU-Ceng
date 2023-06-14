@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{amsfonts, amsmath, pifont}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\begin{document}
+\begin{center}
+	\tikzset{%
+		block/.style    = {draw, thick, rectangle, minimum height = 3em,
+			minimum width = 3em},
+		sum/.style      = {draw, circle, node distance = 2cm}, % Adder
+		input/.style    = {coordinate}, % Input
+		output/.style   = {coordinate} % Output
+	}
+	% Defining string as labels of certain blocks.
+	\newcommand{\suma}{\Large$+$}
+	\newcommand{\inte}{$\displaystyle \int$}
+	\newcommand{\derv}{\huge$\frac{d}{dt}$}
+	
+	\begin{tikzpicture}[auto, thick, node distance=2cm, >=triangle 45]
+	\draw
+	% Drawing the blocks of first filter :
+	node at (0, 0) [input] (inp) {\Large \textopenbullet}
+	node [sum, right of=inp] (sum) {\suma}
+	node [block, right of=sum] (int) {\inte}
+	node [output, right of=int] (out) {}
+	node [output, right of=out] (out2) {\Large \textopenbullet}
+	node [output, below of=out] (temp1) {}
+	node [output, below of=sum] (temp2) {}
+	;
+	\draw[->](inp) -- node{$x(t)$} (sum);
+	\draw[->](sum) -- (int);
+	\draw[-](int) -- (out);
+	\draw[->](out) -- node{$y(t)$} (out2);
+	\draw[-](out) -- (temp1);
+	\draw[->](temp2) -- (sum);
+	\draw[-](temp1) -- node{$-5$} (temp2);
+	\end{tikzpicture}
+\end{center}
+\end{document}
