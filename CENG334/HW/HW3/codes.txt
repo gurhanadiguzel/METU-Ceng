@@ -1,0 +1,10 @@
+dd if=/dev/zero of=example.img bs=1024 count=512
+mke2fs -t ext2 -b 2048 -N 64 example.img
+dumpe2fs example.img
+mkdir fs-root
+fuseext2 -o rw+ example.img fs-root
+fusermount -u fs-root
+e2fsck -fnv example.img
+
+gcc ext2fs.c ext2fs_print.c -w -o main
+./main exapmle.img mkdir new1////new2/new3 
