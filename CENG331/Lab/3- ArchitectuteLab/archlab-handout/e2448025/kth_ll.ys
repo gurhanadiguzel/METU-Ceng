@@ -1,0 +1,58 @@
+# Gürhan İlhan Adıgüzel 
+# 2448025
+
+.pos 0   
+        irmovq  stack, %rsp     # Set up stack pointer
+        call    main            # Execute main program
+        halt                    # Terminate program
+
+main:   irmovq  ele0, %rdi
+        irmovq  $4, %rsi
+        call    func
+        ret
+
+#long kth_ll(const struct list *head, long k)
+# head in %rdi, k in %rsi
+func:	
+        xorq    %rax,%rax       # kth = 0
+        irmovq  $1, %r9	        # Constant 1
+        irmovq  $8, %r10        # Constant 8
+	andq    %rdi, %rdi	# Set CC
+	jne     loop            # Stop when 0
+        jmp     done
+
+loop:   subq    %r9, %rsi       # k--
+        jle     last      
+        addq    %r10, %rdi     
+        mrmovq  (%rdi), %rdi    # Get head = head->next
+        jmp     loop
+
+last:   mrmovq (%rdi),%rax      # kth = head->value
+done:   ret
+
+# Stack starts here and grows to lower addresses
+.pos 0x200
+ele0:
+        .quad 0x0005
+        .quad ele1
+ele1:
+        .quad 0x000c
+        .quad ele2
+ele2:
+        .quad 0x0010
+        .quad ele3
+ele3:
+        .quad 0x001a
+        .quad ele4
+ele4:
+        .quad 0x0030
+        .quad ele5
+ele5:
+        .quad 0x0045
+        .quad ele6
+ele6:
+        .quad 0x005e
+        .quad 0 # Remember that 0 is null.
+
+.pos 0x400
+stack:

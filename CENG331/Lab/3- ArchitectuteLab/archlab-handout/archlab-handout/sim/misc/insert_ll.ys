@@ -1,0 +1,94 @@
+# Gürhan İlhan Adıgüzel 
+# 2448025
+
+.pos 0   
+        irmovq stack, %rsp      # Set up stack pointer
+        call main               # Execute main program
+        halt                    # Terminate program
+
+main:   
+        irmovq ele0, %rdi
+        irmovq array, %rsi
+        irmovq $56, %rdx
+        call func
+        ret
+
+# struct list * insert_ll(struct list *head, long *array, long value)
+# head in %rdi, array in %rsi, value in %rdx
+func:	
+        xorq    %rax,%rax       # kth = 0
+        irmovq  $8, %r8         # Constant 8
+        rrmovq  %rdx, %r9       # Constant value
+        rmmovq  %rdx, (%rsi)    # *array = value;
+        andq    %rdi, %rdi	# Set CC
+        je      done            # Stop when 0
+        mrmovq  (%rdi), %r10    
+        subq    %r10, %r9       # head->value > value
+        jle      done
+        rrmovq  %rdi, %rax      # return head
+        rrmovq  %rdi, %r11      # *temp = head;
+        rrmovq  %r11, %r14      # for temp->next
+
+loop:   
+        rrmovq  %r14, %r11      # r11 = temp
+        addq    %r8, %r14       
+        mrmovq  (%r14), %r14    # r14 = temp->next
+        andq    %r14, %r14	# Set CC
+        je      insert
+        rrmovq  %rdx, %r9       # r9 = value
+        mrmovq  (%r14),%r13     # r13 = temp->next->value    
+        subq    %r13, %r9       # head->value > value
+        jle     insert
+        jmp     loop
+
+insert: 
+        rrmovq  %rsi, %r12      # r12 = array
+        addq    %r8,  %r12      # r12 = (array+8)
+        rmmovq  %r14, (%r12)    # *(array+8) = temp->next;
+        addq    %r8, %r11
+        rmmovq  %rsi, (%r11)    # temp->next = array;
+        ret
+
+done:   
+        rrmovq  %rsi, %rax      # array = rax
+        rrmovq  %rsi, %r12      # r12 = array
+        addq    %r8,  %r12      # r12 = (array+8)
+        rmmovq  %rdi, (%r12)    # *(array+8) = head;
+        ret
+
+# Stack starts here and grows to lower addresses
+# An array with size of 2 to put new element in:
+# Make sure your code works correctly. Do not
+# fill beyond the bounds of the array. You should
+# see the new value and the pointer to the next
+# element.
+
+.pos 0x200
+ele0:
+        .quad 0x0005
+        .quad ele1
+ele1:
+        .quad 0x000c
+        .quad ele2
+ele2:
+        .quad 0x0010
+        .quad ele3
+ele3:
+        .quad 0x001a
+        .quad ele4
+ele4:
+        .quad 0x0030
+        .quad ele5
+ele5:
+        .quad 0x0045
+        .quad ele6
+ele6:
+        .quad 0x005e
+        .quad 0
+
+.pos 0x400
+array:
+    .quad 0
+    .quad 0
+
+stack:
