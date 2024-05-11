@@ -1,0 +1,125 @@
+Philosopher 5 is thinking
+Philosopher 4 is thinking
+Philosopher 1 is thinking
+Philosopher 3 is thinking
+Philosopher 2 is thinking
+Philosopher 1 1 picked up left fork
+Philosopher 1 2 picked up right fork
+Philosopher 1 is eating
+Philosopher 2 3 picked up left fork
+Philosopher 2 4 picked up right fork
+Philosopher 2 is eating
+Philosopher 4 5 picked up left fork
+Philosopher 4 1 picked up right fork
+Philosopher 4 is eating
+Philosopher 1 1 put down left fork
+Philosopher 1 2 put down right fork
+Philosopher 1 is thinking
+Philosopher 2 3 put down left fork
+Philosopher 2 4 put down right fork
+Philosopher 2 is thinking
+Philosopher 5 3 picked up left fork
+Philosopher 5 4 picked up right fork
+Philosopher 5 is eating
+Philosopher 5 3 put down left fork
+Philosopher 5 4 put down right fork
+Philosopher 5 is thinking
+Philosopher 3 2 picked up left fork
+Philosopher 3 3 picked up right fork
+Philosopher 3 is eating
+Philosopher 4 5 put down left fork
+Philosopher 4 1 put down right fork
+Philosopher 2 4 picked up left fork
+Philosopher 2 5 picked up right fork
+Philosopher 2 is eating
+Philosopher 4 is thinking
+Philosopher 2 4 put down left fork
+Philosopher 2 5 put down right fork
+Philosopher 2 is thinking
+Philosopher 1 1 picked up left fork
+Philosopher 1 4 picked up right fork
+Philosopher 1 is eating
+Philosopher 3 2 put down left fork
+Philosopher 3 3 put down right fork
+Philosopher 3 is thinking
+Philosopher 5 5 picked up left fork
+Philosopher 5 2 picked up right fork
+Philosopher 5 is eating
+Philosopher 1 1 put down left fork
+Philosopher 1 4 put down right fork
+Philosopher 1 is thinking
+Philosopher 4 3 picked up left fork
+Philosopher 4 1 picked up right fork
+Philosopher 4 is eating
+Philosopher 5 5 put down left fork
+Philosopher 5 2 put down right fork
+Philosopher 5 is thinking
+Philosopher 3 4 picked up left fork
+Philosopher 3 5 picked up right fork
+Philosopher 3 is eating
+Philosopher 4 3 put down left fork
+Philosopher 4 1 put down right fork
+Philosopher 4 is thinking
+Philosopher 2 2 picked up left fork
+Philosopher 2 3 picked up right fork
+Philosopher 2 is eating
+Philosopher 3 4 put down left fork
+Philosopher 3 5 put down right fork
+Philosopher 3 is thinking
+Philosopher 1 1 picked up left fork
+Philosopher 1 4 picked up right fork
+Philosopher 1 is eating
+Philosopher 2 2 put down left fork
+Philosopher 2 3 put down right fork
+Philosopher 2 is thinking
+Philosopher 5 5 picked up left fork
+Philosopher 5 2 picked up right fork
+Philosopher 5 is eating
+Philosopher 1 1 put down left fork
+Philosopher 1 4 put down right fork
+Philosopher 1 is thinking
+Philosopher 4 3 picked up left fork
+Philosopher 4 1 picked up right fork
+Philosopher 4 is eating
+Philosopher 5 5 put down left fork
+Philosopher 5 2 put down right fork
+Philosopher 5 is thinking
+Philosopher 3 4 picked up left fork
+Philosopher 3 5 picked up right fork
+Philosopher 3 is eating
+Philosopher 4 3 put down left fork
+Philosopher 4 1 put down right fork
+Philosopher 4 is thinking
+Philosopher 2 2 picked up left fork
+Philosopher 2 3 picked up right fork
+Philosopher 2 is eating
+Philosopher 3 4 put down left fork
+Philosopher 3 5 put down right fork
+Philosopher 3 is thinking
+Philosopher 1 1 picked up left fork
+Philosopher 1 4 picked up right fork
+Philosopher 1 is eating
+Philosopher 2 2 put down left fork
+Philosopher 2 3 put down right fork
+Philosopher 2 is thinking
+Philosopher 5 5 picked up left fork
+Philosopher 5 2 picked up right fork
+Philosopher 5 is eating
+Philosopher 1 1 put down left fork
+Philosopher 1 4 put down right fork
+Philosopher 1 is thinking
+Philosopher 3 1 picked up left fork
+Philosopher 3 4 picked up right fork
+Philosopher 3 is eating
+Philosopher 3 1 put down left fork
+Philosopher 3 4 put down right fork
+Philosopher 3 is thinking
+Philosopher 4 3 picked up left fork
+Philosopher 4 1 picked up right fork
+Philosopher 4 is eating
+Philosopher 5 5 put down left fork
+Philosopher 5 2 put down right fork
+Philosopher 5 is thinking
+Philosopher 2 4 picked up left fork
+Philosopher 2 5 picked up right fork
+Philosopher 2 is eating
